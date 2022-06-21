@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.poddtest</groupId>
-	<artifactId>poddtest</artifactId>
+	<artifactId>formstest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>poddtest</name>
-	<description>Poddera test project for Spring Boot</description>
+	<name>formstest</name>
+	<description>PodderaForms V3 test project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
