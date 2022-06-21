@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+ 	<p>Sencilla aplicación web de test (SpringBoot) para comprobar include<br/>
+ 	   de formuarios y su funcionamiento<br/></p>
+ 	  <br/>
+    <p>FORM DE TEST</p>
+    <div><p1>Formulario de xxxx</p1></div>
+    <br/>
+    
+    <!-- http://localhost:8080/poddera_forms_web/app/form/genericFormRuntimeOnlyFormsAndePortal/genericFormRuntimeWithTemplate.jsf?ide=UFpPcm8rUVQyVWc9&mode=new -->
+    <iframe src="http://localhost:8080/poddera_forms_web/app/form/genericFormRuntimeOnlyFormsAndePortal/genericFormRuntimeWithTemplate.jsf?ide=UFpPcm8rUVQyVWc9&mode=new"
+       frameborder="0" scrolling="no" width="70%"  
+       title="iframe Example 1" 
+       id="iFrm2ID">
+	</iframe>
+
+<script type="text/javascript">
+
+	function initFormHeightEvent(){
+		console.log('addEventListener parent page');
+	    window.addEventListener('message', receiveMessage, false);
+	}
+	function receiveMessage(event){
+		console.log("Received a message from " + event.origin + ".");
+		console.log(event.data);
+		var formheight=event.data;
+	    if (formheight > 0 ){
+	    	setChildFormHeight(formheight);	
+	    }
+	}
+
+	window.onload = initFormHeightEvent;
+
+
+	function setChildFormHeight( formheight) {
+		var iframeDocument = document.getElementById('iFrm2ID');
+ 		console.log("received height:"+formheight);
+ 		console.log("previous form height:"+iframeDocument.height)
+ 		iframeDocument.height= formheight + 50 ;
+ 		console.log("enw form height:"+iframeDocument.height)
+	}
+	
+
+</script>
+
+	<div> algo mas</div>
+
+    
+    
+</body>
+</html>
